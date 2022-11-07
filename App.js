@@ -57,7 +57,7 @@ export default function App (){
 
   // fetch data with useEffect hook
     // async to avoid interruption of other information
-    const fetchTwoDimensional= async () => {
+    const fetchTwoDimensional = async () => {
 
       // 2D API endpoint
       await fetch("https://www.devtulloch.com/two-dimensional")
@@ -68,7 +68,7 @@ export default function App (){
           // console.log(data);
         }, []);
     };
-    const fetchThreeDimensional= async () => {
+    const fetchThreeDimensional = async () => {
 
       // 2D API endpoint
       await fetch("https://www.devtulloch.com/three-dimensional")
