@@ -208,7 +208,7 @@ export default function App (){
             {/* Lighting */}
             <ambientLight/>
               <pointLight position={[10, 10, 6]}/>  
-              <Plane/>           
+              <Sphere/>           
               <OrbitControls/>
            </Canvas>
 
