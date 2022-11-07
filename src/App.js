@@ -16,6 +16,7 @@ import Footer from "./Footer";
 import Sphere from "./three(fiber)/Sphere";
 import Slide from "./Carousel";
 import Header from "./Header";
+import About from "./About";
 
 // import { Controls, useControl } from 'react-three-gui';
 // import { folder, useControls, Leva } from "leva";
@@ -50,18 +51,16 @@ export default function App (){
   
   // fetch data from api
   const [data, setData] = React.useState([]); //store fetched data
-  const [info, setInfo] = React.useState([]); //store fetched data
+  // const [info, setInfo] = React.useState([]); //store fetched data
+  
+  useEffect(() => {
 
   // fetch data with useEffect hook
-  React.useEffect(() => {
     // async to avoid interruption of other information
     const fetchTwoDimensional= async () => {
 
       // 2D API endpoint
       await fetch("https://www.devtulloch.com/two-dimensional")
-      await fetch("https://www.devtulloch.com/three-dimensional")
-
-
         .then((res) => res.json()) // convert info to json format
         .then((data) => { // data is the variable used to return api data ex. data.idea or data.id
           setData(data); // store data in previously decleared state and
@@ -71,21 +70,44 @@ export default function App (){
     };
     const fetchThreeDimensional= async () => {
 
-      // 3D API endpoint
+      // 2D API endpoint
       await fetch("https://www.devtulloch.com/three-dimensional")
-
-
         .then((res) => res.json()) // convert info to json format
         .then((data) => { // data is the variable used to return api data ex. data.idea or data.id
-          setInfo(data); // store data in previously decleared state and
+          setData(data); // store data in previously decleared state and
           // display data in the console
           // console.log(data);
         }, []);
     };
-    fetchTwoDimensional(); // run the function
-    fetchThreeDimensional();
+      fetchTwoDimensional();
+      fetchThreeDimensional();
+  })
+    //  fetchTwoDimensional(); // run the function
+   // [] means the use effect hook with only run once
+      
 
-  }); // [] means the use effect hook with only run once
+
+
+  // React.useEffect(() => {
+  //   // async to avoid interruption of other information
+  //   const fetchThreeDimensional= async () => {
+
+  //     // 2D API endpoint
+  //     await fetch("https://devtulloch.com/two-dimensional")
+
+
+  //       .then((res) => res.json()) // convert info to json format
+  //       .then((data) => { // data is the variable used to return api data ex. data.idea or data.id
+  //         setInfo(data); // store data in previously decleared state and
+  //         // display data in the console
+  //         // console.log(data);
+  //       }, []);
+  //   };
+  //   fetchThreeDimensional();
+  // }); // [] means the use effect hook with only run once
+
+   
+
 
 
     return(
@@ -154,7 +176,7 @@ export default function App (){
                   border: "none"
                 
                  }}
-                  type="button" onClick={() => setTwoDimensional(data.idea)}>
+                  type="button" onClick={() => setTwoDimensional(data.ids)}>
                  
                  <img src={twoD} height='120' alt="ellipse" width='100'
                   className="category-button" />
@@ -170,7 +192,7 @@ export default function App (){
                   backgroundColor: "transparent",
                   border: "none"
           
-                 }} type="button" onClick={() => setThreeDimensional(info.idea)}>
+                 }} type="button" onClick={() => setThreeDimensional(data.ids)}>
                  <img src={threeD} height='120' alt="ellipse" width='100'
                   className="category-button" />
                  </button>
@@ -213,8 +235,8 @@ export default function App (){
            </Canvas>
 
           </div>
-          
-          <div><Footer/></div>
+          <About/>
+          {/* <div><Footer/></div> */}
           </div>
         </>
         
