@@ -51,7 +51,7 @@ export default function App (){
   
   // fetch data from api
   const [data, setData] = React.useState([]); //store fetched data
-  // const [info, setInfo] = React.useState([]); //store fetched data
+  const [info, setInfo] = React.useState([]); //store fetched data
   
   useEffect(() => {
 
@@ -74,7 +74,7 @@ export default function App (){
       await fetch("https://www.devtulloch.com/three-dimensional")
         .then((res) => res.json()) // convert info to json format
         .then((data) => { // data is the variable used to return api data ex. data.idea or data.id
-          setData(data); // store data in previously decleared state and
+          setInfo(data); // store data in previously decleared state and
           // display data in the console
           // console.log(data);
         }, []);
@@ -169,6 +169,9 @@ export default function App (){
 
             <div className="center">
               <div className="dimension-idea-name">
+                <div className="center tip">Tip: Click until you're satisfied with the idea.<br/>
+      
+                </div>
                 <div className="center name-position">{twoDimensional}</div>
                 <div className="dimension-ellipse">
                 <button style={{
@@ -192,7 +195,7 @@ export default function App (){
                   backgroundColor: "transparent",
                   border: "none"
           
-                 }} type="button" onClick={() => setThreeDimensional(data.ids)}>
+                 }} type="button" onClick={() => setThreeDimensional(info.ids)}>
                  <img src={threeD} height='120' alt="ellipse" width='100'
                   className="category-button" />
                  </button>
