@@ -92,7 +92,7 @@ export default function App (){
         <>
 
      <div className="body-container">
-     <Leva display/>
+     <Leva hidden/>
 
         {/* Header with green background */}
           
@@ -203,11 +203,11 @@ export default function App (){
 
 
           <div className="main-bg" style={{ width: "100vw", height: "220vh"}}>
-           <Canvas makeDefault  className="bg" id="oct" frameloop="demand">
+           <Canvas makeDefault  className="bg" id="oct" >
             
             {/* Lighting */}
             <ambientLight/>
-              <pointLight position={[10, 10, 6]}/>  
+            <pointLight position={[10, 10, 10]}/>
               <Sphere/>           
               <OrbitControls/>
            </Canvas>

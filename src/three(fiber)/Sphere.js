@@ -6,7 +6,6 @@ import {PerspectiveCamera, PointsBuffer, Torus, useTexture } from '@react-three/
 import { useRef } from "react";
 import { BufferGeometry, LinearEncoding, Mesh, Points } from "three";
 import { folder, useControls } from "leva";
-import { Float32Array } from "three";
 // import img1 from "/Users/tulloch64/Documents/GitHub/CreativeRandomization/src/assets/textures/sun_uv_map.jpeg";
 
 
@@ -43,7 +42,7 @@ export default function Sphere() {
       particlesCount: 5000, particles: 0
     }),
     material: folder({
-      color: "white",
+      color: "#5197a0",
       wireframe: false
     }),
     camera: folder({
@@ -62,7 +61,7 @@ export default function Sphere() {
     if(!meshRef.current){
       return;
     }
-    meshRef.current.rotation.x += 0.01;
+    // meshRef.current.rotation.x += 0.01;
     meshRef.current.rotation.y += 0.01;
      meshRef.current.rotation.z += 0.01;
   });
