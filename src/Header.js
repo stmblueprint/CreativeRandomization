@@ -17,7 +17,7 @@ export default function Header(){
                 <a href=" "><h3 className="title">Creative Randomization</h3></a>
                     <span className="header-links-grid">
                         {/* <a href="https://github.com/stmblueprint/CreativeRandomization"><span><FontAwesomeIcon className="header-icon" icon={faCircleInfo} /></span></a> */}
-                        <a href="https://instagram.com/stmblueprint"><span><FontAwesomeIcon className="header-icon" icon={faInstagram} /></span></a>
+                        {/* <a href="https://instagram.com/stmblueprint"><span><FontAwesomeIcon className="header-icon" icon={faInstagram} /></span></a> */}
                         <a href="https://github.com/stmblueprint/CreativeRandomization"><span><FontAwesomeIcon className="header-icon" icon={faGithub} /></span></a>
                     </span>
 
