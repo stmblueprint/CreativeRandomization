@@ -238,7 +238,7 @@ export default function App (){
            </Canvas>
 
           </div>
-          <About/>
+            {/* <About/> */}
           {/* <div><Footer/></div> */}
           </div>
         </>
