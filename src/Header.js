@@ -1,7 +1,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faInstagram, faSquareInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faInstagram, faSquareInstagram } from "@fortawesome/free-brands-svg-icons";
 import Carousel from "./Carousel";
 import Slide from "./Carousel";
 

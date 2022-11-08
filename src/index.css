@@ -486,3 +486,45 @@ footer{
   font-style: italic;
   opacity: 0.7;
 }
+
+.about-container{
+  flex-wrap: wrap;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  font-size: 20px;
+  font-style: italic;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: rgba(244, 241, 241, 0.707);
+}
+.header-icon-about{
+  opacity: 0.7;
+}
+.form-container{
+  margin-top: 60px;
+ 
+  margin-left: 20px;
+
+}
+input[type=text]{
+  width: 60vw;
+  border-radius: 6px;
+  height: 50px;
+  border: 1px solid #8EF5AB;
+}
+input[type=submit]{
+  color: black;
+  background-color: white;
+  border: #8EF5AB 1px solid;
+  font-weight: bold;
+  border-radius: 6px;
+  height: 50px;
+  box-shadow: 6px 2px 12px gray;
+  cursor: pointer;
+}
+input[type=submit]:hover{
+  scale: 0.9;
+  border: #555 1px solid;
+}

@@ -17,6 +17,9 @@ import Sphere from "./three(fiber)/Sphere";
 import Slide from "./Carousel";
 import Header from "./Header";
 import About from "./About";
+import SubmitIdeas from "./SubmitIdeas";
+
+
 
 // import { Controls, useControl } from 'react-three-gui';
 // import { folder, useControls, Leva } from "leva";
@@ -202,6 +205,10 @@ export default function App (){
                 </div>
               </div>
             </div>
+            <div><SubmitIdeas/></div>
+            <section>
+                <About/>
+            </section>
             <div className="main-bg" style={{ width: "100vw", height: "100vh" }}>
            <Canvas makeDefault  className="bg" id="oct">
 
@@ -238,7 +245,8 @@ export default function App (){
            </Canvas>
 
           </div>
-            {/* <About/> */}
+
+         
           {/* <div><Footer/></div> */}
           </div>
         </>
