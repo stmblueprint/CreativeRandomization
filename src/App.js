@@ -117,7 +117,7 @@ export default function App (){
         <>
 
      <div className="body-container">
-     <Leva display/>
+     <Leva hidden/>
 
         {/* Header with green background */}
           

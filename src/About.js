@@ -22,8 +22,8 @@ import { faGithub, faInstagram, faSquareInstagram } from "@fortawesome/free-bran
             This website was developed for artists and creatives who might need fresh ideas to spark their creativity.<br/><br/>
             Be on the lookout for future additions and updates!
         </p>
-        Developer:      &nbsp;<a href="https://instagram.com/stmblueprint"><span><FontAwesomeIcon className="header-icon" icon={faInstagram} /></span></a>&nbsp;&nbsp;
-                        <a href="https://github.com/stmblueprint"><span><FontAwesomeIcon className="header-icon" icon={faGithub} /></span></a>
+        {/* Developer:      &nbsp;<a href="https://instagram.com/stmblueprint"><span><FontAwesomeIcon className="header-icon" icon={faInstagram} /></span></a>&nbsp;&nbsp; */}
+                        {/* <a href="https://github.com/stmblueprint"><span><FontAwesomeIcon className="header-icon" icon={faGithub} /></span></a> */}
      </div>
     </> )
 }
